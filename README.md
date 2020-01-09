@@ -10,7 +10,7 @@ This download process will be slow
 
 Modify permissions
 
-  ```$ sudo chmod + x / usr / local / bin / docker-compose```
+  ```$ sudo chmod + x /usr/local/bin/docker-compose```
 
 View version
 
