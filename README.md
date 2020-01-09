@@ -4,17 +4,17 @@
 
 1. upgrade Docker Compose, Docker Official Installation Method
 
-$```sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$ (uname -m)" -o /usr/local/bin/docker-compose```
+  ```$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$ (uname -m)" -o /usr/local/bin/docker-compose```
 
 This download process will be slow
 
 Modify permissions
 
-$```sudo chmod + x / usr / local / bin / docker-compose```
+  ```$ sudo chmod + x / usr / local / bin / docker-compose```
 
 View version
 
-$```docker-compose -version```
+  ```$ docker-compose -version```
 
 >docker-compose version 1.24.1, build 4667896b
 
@@ -41,42 +41,45 @@ Compose file format	Docker Engine
 3.7	18.06.0+
  
 
-2 , upgrade docker, docker official upgrade(https://docs.docker.com/v18.09/install/linux/docker-ce/debian/#upgrade-docker-ce)
+2. upgrade docker, docker official [upgrade](https://docs.docker.com/v18.09/install/linux/docker-ce/debian/#upgrade-docker-ce)
 
-a , first uninstall the old version and update the system
-
-
-$```sudo apt-get remove docker docker-engine docker.io containerd runc```
-
-$```sudo apt-get update```
-
-$```sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common```
+  a. first uninstall the old version and update the system
 
 
-b . Install key management and download related tools
+  ```$ sudo apt-get remove docker docker-engine docker.io containerd runc```
 
-$ ```sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common```
+  ```$ sudo apt-get update```
 
-c . Download and install the key
+```$ sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common```
 
-$```curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add-```
 
-After installation, it will prompt " OK " ,
+  b. Install key management and download related tools
 
-d . Check whether the key is successfully installed and successfully prompt the content dongge @ dongge-PC: ~ 
+  ```$ sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common```
 
-$```sudo apt-key fingerprint 0EBFCD88```
-```pub rsa4096 2017-02-22 [SCEA]```
-```9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88```
-```uid [ Unknown ] Docker Release (CE deb) <docker@docker.com >```
-```sub rsa4096 2017-02-22 [S]```
+  c. Download and install the key
 
-e . Add docker-ce software source to source.list
+  ```$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add-```
 
-$```sudo add-apt-repository "deb [arch = amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/debian wheezy stable"```
+### After installation, it will prompt " OK " ,
 
->// Official source // sudo add-apt-repository  "deb [arch = amd64] https://download.docker.com/linux/debian wheezy stable"
-// 15.11 will prompt  aptsources.distro.NoDistroTemplateException: Error: could not find a distribution template for Deepin / stable // Here we can add a line by editing sudo vim /etc/apt/sources.lis t , the reason is unknown
+  d. Check whether the key is successfully installed and successfully prompt the content dongge @ dongge-PC: ~ 
+
+  ```$ sudo apt-key fingerprint 0EBFCD88```
+  ```pub rsa4096 2017-02-22 [SCEA]```
+  ```9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88```
+  ```uid [ Unknown ] Docker Release (CE deb) <docker@docker.com >```
+  ```sub rsa4096 2017-02-22 [S]```
+
+  e. Add docker-ce software source to source.list
+
+  ```$ sudo add-apt-repository "deb [arch = amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/debian wheezy stable"```
+
+>// Official source 
+>// sudo add-apt-repository  "deb [arch = amd64] https://download.docker.com/linux/debian wheezy stable"
+
+>// 15.11 will prompt  aptsources.distro.NoDistroTemplateException: Error: could not find a distribution template for Deepin/stable 
+>// Here we can add a line by editing sudo vim /etc/apt/sources.lis t , the reason is unknown
 
 $```sudo add-apt-repository "deb [arch = amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/debian stretch stable"```
 
